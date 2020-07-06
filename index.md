@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-[Test-Link](/about.md)
+[About](/about.md)
 
 You can use the [editor on GitHub](https://github.com/bre-w/bre-w.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
