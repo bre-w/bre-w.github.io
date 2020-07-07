@@ -1,3 +1,4 @@
 title: Brendan Williams
 name: Poop Face
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
