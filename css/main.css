@@ -5,6 +5,7 @@ body {
 .header {
   padding: 30px;
   text-align: center;
+  color: #999;
   background: LightBlue;
 }
 nav ul, footer ul {
