@@ -3,11 +3,9 @@ body {
     width: 70%;
 }
 .header {
-  padding: 60px;
+  padding: 30px;
   text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 30px;
+  background: LightBlue;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
