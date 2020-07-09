@@ -42,6 +42,11 @@ h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+h1 {
+    font-size: 2em;
+    color: Black;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
 p {
     font-size: 1.5em;
     line-height: 1.4em;
@@ -51,7 +56,11 @@ footer {
     border-top: 1px solid SlateGrey;
     font-size: .8em;
 }
-
+ol.post { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+    color: SlateGrey;
+}
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
