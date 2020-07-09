@@ -6,7 +6,8 @@ body {
   padding: 30px;
   text-align: center;
   color: #333;
-  background: LightBlue;
+  background: SeaGreen;
+  border-radius: 10px;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
