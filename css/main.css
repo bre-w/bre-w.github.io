@@ -5,9 +5,9 @@ body {
 .header {
   padding: 30px;
   text-align: center;
-  color: #333;
-  background: SeaGreen;
-  border-radius: 10px;
+  color: White;
+  background: SlateGrey;
+  border-radius: 25px;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -21,7 +21,7 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: SteelBlue;
 }
 a:hover {
     text-decoration: underline;
@@ -33,7 +33,7 @@ h1 {
 p {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
+    color: SlateGrey;
 }
 footer {
     border-top: 1px solid #d5d5d5;
