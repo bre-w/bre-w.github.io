@@ -9,7 +9,7 @@ body {
   background: SlateGrey;
   border-radius: 25px;
 }
-#header a {
+.header a {
     text-decoration: none;
     color: White;
 }
