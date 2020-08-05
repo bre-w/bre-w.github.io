@@ -41,6 +41,7 @@ a:hover {
 }
 h1 {
     font-size: 3em;
+    color: Blue;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 h2 {
