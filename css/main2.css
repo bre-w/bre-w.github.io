@@ -64,6 +64,8 @@ footer {
     font-size: .8em;
 }
 ol { 
+    font-size: 1.4em;
+    line-height: 1.4em;
     margin: 20px auto 40px;
     color: Black;
 }
