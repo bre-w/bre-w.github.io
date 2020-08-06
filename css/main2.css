@@ -17,11 +17,11 @@ body {
   background: SlateGrey;
   border-radius: 25px;
 }
-.header a{
+.header a {
     text-decoration: none;
     color: White;
 }
-.header h1{
+.header h1 {
     color: White;
 }
 
@@ -43,15 +43,20 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
+    font-size: 3em;
     color: Black;
 }
 h2 {
+    font-size: 2em;
     color: SteelBlue;
 }
 h3 {
+    font-size: 1.6em;
     color: Black;
 }
 p {
+    font-size: 1.4em;
+    line-height: 1.4em;
     color: Black;
 }
 footer {
@@ -59,8 +64,7 @@ footer {
     font-size: .8em;
 }
 ol { 
-    margin: 20px auto 40px; 
-
+    margin: 20px auto 40px;
     color: Black;
 }
 ul.posts { 
