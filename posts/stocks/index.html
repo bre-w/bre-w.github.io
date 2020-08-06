@@ -3,6 +3,17 @@
 <head>
   <link rel="stylesheet" href="../../css/main.css">
   <title>Stock Prediction with Deep Q Learning</title>
+  <div class="header">
+				<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/cv">CV</a></li>
+					<li><a href="/blog">Posts</a></li>
+				</ul>
+				</nav>
+				<h1>{{ page.title}}</h1>
+			</div>
 </head>
 <body>
 
@@ -50,5 +61,11 @@ Instead of a table mapping state, action pairs to a values we will use a functio
 
 As mentioned previously, our input to the network will be an array of the previous n days of stock prices. Although n will be a paramter we can change, for this example we'll use 30, so essentially a one month look back.
 
+  <footer>
+	    		<ul>
+	        		<li><a href="mailto:brendanthewilliams@gmail.com">email</a></li>
+	        		<li><a href="https://github.com/bre-w">github.com/bre-w</a></li>
+				</ul>
+			</footer>
 </body>
 </html>
