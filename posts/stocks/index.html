@@ -20,14 +20,16 @@
 <h2>Problem Setup</h2>
 <p>
 Our goal is to create a model which will recommend what action to take today given the previous n days of data as input. More specifically, the input will be an n-length array of normalized daily adjusted close prices for a single stock. For this basic model we will have three possible actions:
+</p>
+	
 <ol>
   <li>Sell all held stocks</li>
   <li>Buy with all available cash</li>
   <li>Do nothing</li>
 </ol>
-
+<p>
 We will train a neural network from scratch using TensorFlow and the reinforcement learning technique known as Q learning.
-</p>
+	</p>
 <hr>
 	
 <h2>Q Learning</h2>
@@ -37,7 +39,8 @@ Q learning is simply a mapping of a state, action pair (s, a) to a scalar value 
 <h3>Learning the Mappings</h3>
 <p>
 To learn the mappings we explore the "world". This essentially involves moving around from state to state based on actions chosen and obtaining rewards during these state transitions. The goal is to get a q value as a function of the state action pair, Q(s, a), for all possible state action pairs. Note that we first initialize q values for each s, a pair typically to random small values or zeros. The procedure is as follows:
-<ol>
+	</p>
+	<ol>
   <li>Begin in some state, s (in our case we would start at some day, and the state would be the stock prices of the previous n days)</li>
   <li>Take an action, a. This is often done using an e-greedy policy. In this policy we take a random action with probability e, and we take the assumed optimal action with probability `1 - e`</li>
   <li>Based on the action taken, move into the next state, s'</li>
@@ -45,13 +48,14 @@ To learn the mappings we explore the "world". This essentially involves moving a
   <li>Obtain the highest possible q value, q', for this new state s'. That is, scan the q values over all possible actions given s', and select the highest q value</li>
   <li>Set the Q(s, a) mapping = r + gamma * q' where gamma is a reward discount factor</li>
   </ol>
-  
+ <p> 
 Step 6 is where the neural network comes in handy. However, if the state-action space is small enough we don't need a function approximator (e.g. neural network) and a table will suffice. For example, instead of using a n-length vector as our state, let's use a scalar. Specifically, let's use a common technical indicator such as [Bollinger Bands](https://en.wikipedia.org/wiki/Bollinger_Bands). We could discretize this continuous value into buckets, let's say five for example. Then the total number of unique state, action spaces is `5 * 3 = 15`, a very small space which we are almost certainly to explore multiple times. In fact, we certainly don't need to limit ourselves to a single technical indicator. Let's say we use four various indicators, each discretized into five buckets. Then the total number of unique state, action spaces is `5`<sup>`4`</sup>` * 3 = 1875`, still a very reasonable number. If, however, we wanted to use the previous 30 days stock prices (n=30) and we are discretizing each price into five buckets, we now have `5`<sup>`30`</sup>` * 3 = 3e21` unique state action pairs. This creates two main problems:
-<ol>
+	</p>
+	<ol>
   <li>This is far too big a space to exhastively explore</li>
   <li>This requires far too much memory to store such a table</li>
 </ol>
-</p>
+	
 <h3>Function Approximation</h3>
 <p>
 Instead of a table mapping state, action pairs to a values we will use a function approximator. Specifically, we will use a neural networks (nn) as are function approximator due to its ability to approximate any function given sufficient architecture and relatively smooth boundaries. Using this approximator solves the two problems above. Assuming nearby states have similar q values we don't need to explore every possible state, action to get reasonable estimates for q. Also, we don't need to store q values for every state, action pair, only the parameters of the network that will let us cacluate the q estimate when needed. When implementing the nn, we will have it take a state as the input and output a q value for each action. We could combine an action with the state and use that as the input to the nn with a single q value output, but the former method requires less passes through the network and is more efficient.
@@ -59,9 +63,9 @@ Instead of a table mapping state, action pairs to a values we will use a functio
 <hr>
 
 <h2>Neural Network Architecture</h2>
-
+<p>
 As mentioned previously, our input to the network will be an array of the previous n days of stock prices. Although n will be a paramter we can change, for this example we'll use 30, so essentially a one month look back.
-
+	</p>
   <footer>
 	    		<ul>
 	        		<li><a href="mailto:brendanthewilliams@gmail.com">email</a></li>
